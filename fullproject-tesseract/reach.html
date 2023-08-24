@@ -19,14 +19,14 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
           <div class="container">
             <a class="navbar-brand" href="index.html">Beranda</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="index.htmlcollapsibleNavId" aria-controls="collapsibleNavId"
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Projects</a>
@@ -51,19 +51,58 @@
   <main>
     <div class="container">
         <div class="row-cols-8 justify-content-center align-items-start g-2">
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="Title">
-                <div class="card-body">
-                    <h4 class="card-title">Ibrahim Naufal Hakim</h4>
-                    <p class="card-text">Perkenalkan, saya siswa SMKN 10 Semarang, saya berusia 16 tahun dan mengampu jurusan RPL, saya memiliki hobi bermain laptop dan bercita cita menjadi programmer <br> Terimakasih</p>
+            <h1><center> Send me message! </center></h1>
+            <form action="">
+                <div class="mb-3">
+                  <label for="" class="form-label">Name</label>
+                  <input type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Full Name">
+                  <small id="helpId" class="form-text text-muted">Fill your name</small>
                 </div>
-            </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control" name="formId1" id="formId1" placeholder="">
+                  <label for="formId1">Email</label>
+                </div>
+                <!-- Modal trigger button -->
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                  Kirim
+                </button>
+                
+                <!-- Modal Body -->
+                <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">Pesan baru</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Submit berhasil
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Optional: Place to the bottom of scripts -->
+                <script>
+                    const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+                
+                </script>
+            </form>
         </div>
     </div>
   </main>
   <footer>
     <!-- place footer here -->
-    <div class="alert alert-dark alert-dismissible fade show" role="alert">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         <strong>My Social Media</strong> link
       </div>
@@ -74,11 +113,9 @@
           new bootstrap.Alert(alert)
         })
       </script>
-      
-      <div class="alert alert-dark" role="alert">
+    <div class="alert alert-primary" role="alert">
         <strong>Naufal Hakim</strong> Copyright all reserved
-      </div>
-      
+    </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
